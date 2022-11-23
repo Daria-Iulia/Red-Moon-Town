@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300&display=swap");
+:root {
+  --black: #212529;
+  --white: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Permanent Marker", cursive;
+  background-image: url(2.jpg);
+  background-size: cover;
+}
+
+.container {
+  width: 1170px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: auto;
+}
+
+.landing-page {
+  position: relative;
+}
+
+.landing-page .header-area {
+  display: flex;
+  padding: 25px 0 0;
+  position: relative;
+}
+
+.landing-page .header-area .logo {
+  text-transform: uppercase;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 19px;
+  width: 300px;
+  color: var(--black);
+}
+
+.landing-page .header-area .links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: right;
+}
+
+.landing-page .header-area .links li {
+  display: inline-block;
+  margin-left: 30px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.landing-page .header-area .links li:last-child:hover {
+  color: red;
+}
+
+.landing-page .info {
+  width: 35%;
+  float: left;
+  margin-top: 130px;
+}
+
+.landing-page .info h1 {
+  font-size: 44px;
+  margin: 0 0 20px;
+  line-height: 1.4;
+  color: var(--black);
+}
+
+.landing-page .info p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: var(--black);
+}
+
+.landing-page .image {
+  width: 50%;
+  float: right;
+  margin-top: 35px;
+}
+
+.landing-page .image img {
+  max-width: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.logo img {
+  margin-top: -20px;
+  height: 60px;
+  width: auto;
+}
+
+.button-container {
+  transition: 0.5s;
+}
+.button-container button {
+  background: var(--black);
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  color: var();
+  cursor: pointer;
+  animation: anim1 0.7s steps(22) forwards;
+  font-family: "Overpass Mono", monospace;
+  border-radius: 20px;
+  color: #d4cdbe;
+  padding: 12px 30px;
+  margin-top: 30px;
+}
+.button-container button:hover {
+  animation: anim2 0.7s steps(22) forwards;
+}
+
+.mask {
+  position: absolute;
+  color: var(--black);
+  text-align: center;
+  overflow: hidden;
+}
+
+@keyframes anim1 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes anim2 {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
